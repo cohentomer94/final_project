@@ -1,21 +1,13 @@
-import java.io.*;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-
-public class HelloWorld extends HttpServlet {
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws IOException, ServletException
-    {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>111111111111111111111!</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>Hello World!</h1>");
-        out.println("</body>");
-        out.println("</html>");
-    }
-}
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Guru current Date</title>
+</head>
+<body>
+Today's date: <%= (new java.util.Date()).toLocaleString()%>
+</body>
+</html>
